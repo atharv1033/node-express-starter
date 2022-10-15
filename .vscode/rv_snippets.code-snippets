@@ -1,0 +1,246 @@
+{
+	"error-log": {
+		"prefix": [
+			"log-error"
+		],
+		"body": [
+			"logger.consoleErrorLog(req.originalUrl, 'Error in functionName', error);"
+		],
+		"description": "Error log"
+	},
+	"info-log": {
+		"prefix": [
+			"log-info"
+		],
+		"body": [
+			"logger.consoleInfoLog(req.originalUrl, 'LogMessage');"
+		],
+		"description": "Error log"
+	},
+	"controller-file": {
+		"prefix": [
+			"controller-file"
+		],
+		"body": [
+			"import { sendResponse } from '@/core/services/ResponseService';",
+			"import statusType from '@/core/enum/statusTypes';",
+			"import logger from '@/core/services/LoggingService';",
+			"",
+			"export async function Function(req, res) {",
+			"",
+			"\ttry {",
+			"",
+			"",
+			"",
+			"\t\treturn sendResponse(res, true, null, 'Api Not Ready Yet');",
+			"\t} catch (error) {",
+			"\t\tlogger.consoleErrorLog(req.originalUrl, 'Error in functionName', error);",
+			"\t\treturn sendResponse(res, false, null, 'Error ', statusType.DB_ERROR);",
+			"\t}",
+			"};"
+		],
+		"description": "Controller File"
+	},
+	"controller": {
+		"prefix": [
+			"controller"
+		],
+		"body": [
+			"export async function Function(req, res) {",
+			"",
+			"\ttry {",
+			"",
+			"",
+			"",
+			"\t\treturn sendResponse(res, true, null, 'Api Not Ready Yet');",
+			"\t} catch (error) {",
+			"\t\tlogger.consoleErrorLog(req.originalUrl, 'Error in functionName', error);",
+			"\t\treturn sendResponse(res, false, null, 'Error ', statusType.DB_ERROR);",
+			"\t}",
+			"};"
+		],
+		"description": "Empty Controller"
+	},
+	"router-file": {
+		"prefix": [
+			"router-file"
+		],
+		"body": [
+			"import express from 'express';",
+			"const router = express.Router();",
+			"",
+			"import * as Controller from './Controller'",
+			"",
+			"",
+			"",
+			"export default router;"
+		],
+		"description": "Router File"
+	},
+	"route": {
+		"prefix": [
+			"route"
+		],
+		"body": [
+			"router.route('/').();"
+		],
+		"description": "Empty route."
+	},
+	"no-record": {
+		"prefix": [
+			"no-record"
+		],
+		"body": [
+			"if(data.length < 1) {",
+			"\t\treturn sendResponse(res, false, null, 'No Record Found')",
+			"}"
+		],
+		"description": "No record"
+	},
+	"if-not": {
+		"prefix": [
+			"if-not"
+		],
+		"body": [
+			"if (!param) {",
+			"\tconsole.log('Wrong params provided');",
+			"\t\treturn sendResponse(res, false, null, 'Wrong Params Provided', statusType.BAD_REQUEST)",
+			"}",
+		],
+		"description": "Empty if-not."
+	},
+	"return-res": {
+		"prefix": [
+			"return-res"
+		],
+		"body": [
+			"return sendResponse(res, false, null, 'Message')",
+		],
+		"description": "return response"
+	},
+	"updated-at": {
+		"prefix": [
+			"updated-at"
+		],
+		"body": [
+			"updated_at: moment().format(MYSQL_MOMENT_DATETIME_FORMAT)"
+		],
+		"description": "updated_at column"
+	},
+	".where": {
+		"prefix": [
+			".where"
+		],
+		"body": [
+			".where({",
+			"\tis_active: 'Y'",
+			"})"
+		],
+		"description": "where clause with is active"
+	},
+	"getObjOrNull": {
+		"prefix": [
+			"get-obj-or-null"
+		],
+		"body": [
+			"getObjOrNull(req.body),",
+		],
+		"description": "getObjOrNull"
+	},
+	"user-id": {
+		"prefix": [
+			"user-id"
+		],
+		"body": [
+			"const user_id = req.userInfo.user_id;",
+		],
+		"description": "user_id from token"
+	},
+	"req-params": {
+		"prefix": [
+			"req-params"
+		],
+		"body": [
+			"const {  } = req.params;",
+		],
+		"description": "destructure req.params"
+	},
+	"req-body": {
+		"prefix": [
+			"req-body"
+		],
+		"body": [
+			"const {  } = req.body;",
+		],
+		"description": "destructure req.body"
+	},
+	"req-query": {
+		"prefix": [
+			"req-query"
+		],
+		"body": [
+			"const {  } = req.query;",
+		],
+		"description": "destructure req.query"
+	},
+	"create-send-notification-email": {
+		"prefix": [
+			"create-send-notification"
+		],
+		"body": [
+			"let text = ``;",
+			"createAndSendNotificationWithMail(",
+			"\tnull, //Notification creator id",
+			"\t{",
+			"\t\tnotification_id: null,",
+			"\t\tnotification_name: ``,",
+			"\t\tnotification_heading: text,",
+			"\t\tnotification_text: ``,",
+			"\t\tnotification_image: ``",
+			"\t},",
+			"\tuser_ids,",
+			"\t{",
+			"\t\tsubject: ``,",
+			"\t\ttext: text",
+			"});"
+		],
+		"description": "create send notification with email"
+	},
+	"model-prisma": {
+		"prefix": [
+			"model-prisma"
+		],
+		"body": [
+			"model ModelName {",
+			"\t_id\tInt\t@id @default(autoincrement())",
+			"\t",
+			"\t_is_active    Boolean @default(true)",
+			"\t_created_by   String?   @db.VarChar(25)",
+			"\t_updated_by   String?   @db.VarChar(25)",
+			"\t_created_at   DateTime @default(now())",
+			"\t_updated_at   DateTime @updatedAt",
+			"\t_archive      Boolean  @default(false)",
+			"\t_delete       Boolean  @default(false)",
+			"}"
+		],
+		"description": "prisma model"
+	},
+	"string-prisma": {
+		"prefix": [
+			"string-prisma"
+		],
+		"body": [
+			" String?   @db.VarChar(255)"
+		],
+		"description": "prisma string"
+	},
+	"relation-prisma": {
+		"prefix": [
+			"relation-prisma"
+		],
+		"body": [
+			"_relation TableName @relation(fields: [_id], references: [_id])"
+		],
+		"description": "prisma relation"
+	}
+}

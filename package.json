@@ -1,0 +1,45 @@
+{
+  "name": "node-express-starter",
+  "version": "1.0.0",
+  "description": "A Starter Project In Node Using ExpressJS",
+  "main": "./src/server.js",
+  "prisma": {
+    "seed": "node prisma/seed.mjs"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "dev": "kill-port 8003 && nodemon ./src/server.js --exec babel-node",
+    "start": "node ./dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rv",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@": "src",
+    "@core": "src/@core"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "nodemon": "^2.0.19",
+    "prettier": "2.7.1",
+    "prisma": "^4.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.18.6",
+    "@prisma/client": "^4.0.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "winston": "^3.8.1"
+  }
+}
