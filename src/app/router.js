@@ -1,11 +1,11 @@
-import express from 'express';
-import accessMiddleware from './middlewares/accessMiddleware';
-import homeRoutes from './modules/home/homeRoutes';
-import userRoutes from './modules/users/userRoutes';
+import express from 'express'
+import accessMiddleware from './middlewares/accessMiddleware'
+import homeRoutes from './modules/home/homeRoutes'
+import userRoutes from './modules/users/userRoutes'
 
-const router = express.Router();
+const router = express.Router()
 
-router.use('/user', accessMiddleware('user'), userRoutes);
-router.use('/home', accessMiddleware('home'), homeRoutes);
+router.use('/user', accessMiddleware('user'), userRoutes)
+router.use('/home', accessMiddleware('home'), homeRoutes)
 
-export default router;
+export default router

@@ -1,7 +1,7 @@
 const uploadType = {
-	AVATAR: "avatar",
-	DOCUMENT: "document",
-	IMAGE: "image",
+	AVATAR: 'avatar',
+	DOCUMENT: 'document',
+	IMAGE: 'image',
 };
 
-export default uploadType;
+export default uploadType

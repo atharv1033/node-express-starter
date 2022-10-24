@@ -5,4 +5,4 @@ import * as userController from './userController'
 
 
 
-export default router;
+export default router

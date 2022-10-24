@@ -1,7 +1,7 @@
 const environmentType = {
-	DEVELOPMENT: "development",
-	STAGING: "staging",
-	PRODUCTION: "production",
+	DEVELOPMENT: 'development',
+	STAGING: 'staging',
+	PRODUCTION: 'production',
 };
 
-export default environmentType;
+export default environmentType

@@ -2,11 +2,10 @@ MODE="development"
 
 PORT=8003
 
-DATABASE_URL="mysql://prisma:Prisma#1234@localhost:3306/starter?schema=public"
+DATABASE_URL="mysql://prisma:password@localhost:3306/starter?schema=public"
 
 JWT_ACCESS_SECRET="793472e6d8d22a64acc569f0b761b3aaf5e039ef"
 JWT_ACCESS_TOKEN_EXPIRE="1d"
-
 JWT_REFRESH_SECRET="4334df97fc28724451dd91bdbc1e6d9534506167"
 JWT_REFRESH_TOKEN_EXPIRE="10d"
 

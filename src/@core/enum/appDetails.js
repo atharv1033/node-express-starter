@@ -1,7 +1,7 @@
 const app = {
-	APPNAME: "Enpointe Node Boilerplate",
-	SERVICE_NAME: "Enpointe Software Service",
-	DESCRIPTION: "Enpointe Node Boilerplate",
-};
+	APPNAME: 'RV Node Boilerplate',
+	SERVICE_NAME: 'RV Software Service',
+	DESCRIPTION: 'RV Node Boilerplate',
+}
 
-export default app;
+export default app

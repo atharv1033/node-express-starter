@@ -13,4 +13,4 @@ const statusType = {
 	DB_ERROR: 422,
 };
 
-export default statusType;
+export default statusType

@@ -1,18 +1,18 @@
 // enums
-import appDetails from '@core/enum/appDetails';
+import appDetails from '@core/enum/appDetails'
 
-export const APP_NAME = appDetails.APPNAME;
-export const SERVICE_NAME = appDetails.SERVICE_NAME;
+export const APP_NAME = appDetails.APPNAME
+export const SERVICE_NAME = appDetails.SERVICE_NAME
 
-export const MYSQL_MOMENT_DATE_FORMAT = 'YYYY-MM-DD';
+export const MYSQL_MOMENT_DATE_FORMAT = 'YYYY-MM-DD'
 
-export const MYSQL_MOMENT_DATETIME_FORMAT = 'YYYY-MM-DD HH:mm:ss';
+export const MYSQL_MOMENT_DATETIME_FORMAT = 'YYYY-MM-DD HH:mm:ss'
 
-export const MESSAGE_NOT_ALLOWED = 'Not allowed to access customer services';
-export const MESSAGE_AUTH_ERROR = 'Unauthorized or invalid OTP.';
-export const MESSAGE_NOT_FOUND_ERROR = 'Not found. Please try after sometime.';
-export const MESSAGE_DB_ERROR = 'Something went wrong while processing data.';
-export const MESSAGE_APP_ERROR = 'Something went wrong while processing data.';
+export const MESSAGE_NOT_ALLOWED = 'Not allowed to access customer services'
+export const MESSAGE_AUTH_ERROR = 'Unauthorized or invalid OTP.'
+export const MESSAGE_NOT_FOUND_ERROR = 'Not found. Please try after sometime.'
+export const MESSAGE_DB_ERROR = 'Something went wrong while processing data.'
+export const MESSAGE_APP_ERROR = 'Something went wrong while processing data.'
 
 // Response Messages
 
@@ -29,8 +29,8 @@ export const RESPONSE_MESSAGES = {
 	CODE_200: 'Success',
 	CODE_201: 'Created',
 	CODE_422: 'Something went wrong, Database error',
-};
+}
 
 export const CUSTOM_RESPONSE_MESSAGES = {
 	USER_RES: 'Custom Response message will come here',
-};
+}

@@ -1,7 +1,7 @@
 const roleType = {
-	FULL: "full",
-	READ: "read",
-	WRITE: "write",
+	FULL: 'full',
+	READ: 'read',
+	WRITE: 'write',
 };
 
-export default roleType;
+export default roleType
